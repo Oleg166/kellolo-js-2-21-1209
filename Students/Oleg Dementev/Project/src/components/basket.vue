@@ -31,7 +31,8 @@ export default {
         return {
             items: [],
             //url: 'https://raw.githubusercontent.com/kellolo/static/master/JSON/basket.json'
-            url: '/api/basket'
+            url: '/api/basket' //dev
+            //url: '/basket' //build
         }
     },
     methods: {

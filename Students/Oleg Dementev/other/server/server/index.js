@@ -3,6 +3,8 @@ const fs = require('fs');
 const server = express();
 server.use(express.json());
 
+server.use('/', express.static('./public'));
+
 server.get('/catalog', (req, res) => {
 
     // синхронное чтение (если нужно обработать ошибки)
@@ -35,9 +37,9 @@ server.get('/basket', (req, res) => {
 //     res.send('Hello')
 // }) 
 
-// server.get('/world', (req, res) => {
-//     res.send('Hello world')
-// })
+//server.get('/world', (req, res) => {
+//    res.send('Hello world')
+//})
 
 // server.get('/basket', (req, res) => {
 //     res.json({ content: [{id: 1}, {id: 2}]})
